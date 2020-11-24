@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="PSP_FINAL_1T_AGF:jar">
+  <artifact type="jar" build-on-make="true" name="PSP_FINAL_1T_AGF:jar">
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="PSP_FINAL_1T_AGF.jar">
       <element id="module-output" name="PSP_FINAL_1T_AGF.main" />

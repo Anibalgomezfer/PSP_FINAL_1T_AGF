@@ -20,3 +20,13 @@ dependencies{
 
 }
 
+jar {
+    manifest {
+        attributes "Main-Class": "com.clases.PSP_FINAL_1T_AGF.Main"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+

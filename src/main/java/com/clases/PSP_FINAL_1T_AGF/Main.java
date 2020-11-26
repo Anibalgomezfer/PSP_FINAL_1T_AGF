@@ -16,14 +16,14 @@ public class Main {
 
         try {
             while (numRegistros <= 0) {
-                System.out.println("Introduce el número de registros que quieres introducir: ");
+                System.out.println("Introduce el numero de registros que quieres introducir: ");
                 numRegistros = teclado.nextInt();
                 if (numRegistros <= 0) {
                     System.out.println("Debes introducir al menos 1 registro.");
                 }
             }
         } catch (InputMismatchException e) {
-            System.out.println("Parece que has introducido una letra y se esperaba un número.");
+            System.out.println("Parece que has introducido una letra y se esperaba un numero.");
             System.out.println("Inicia el programa de nuevo.");
 
         }
@@ -31,14 +31,14 @@ public class Main {
 
         try {
             while (numHilos <= 0) {
-                System.out.println("Introduce el número de hilos que deseas utilizar: ");
+                System.out.println("Introduce el numero de hilos que deseas utilizar: ");
                 numHilos = teclado.nextInt();
                 if (numHilos <= 0) {
                     System.out.println("Debes utilizar al menos un hilo.");
                 }
             }
         } catch (InputMismatchException e) {
-            System.out.println("Parece que has introducido una letra y se esperaba un número.");
+            System.out.println("Parece que has introducido una letra y se esperaba un numero.");
             System.out.println("Inicia el programa de nuevo.");
         }
 

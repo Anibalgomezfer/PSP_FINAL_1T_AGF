@@ -44,7 +44,7 @@ public class Empleado extends Thread {
                 conexion.close();
             }
         } catch (SQLException e) {
-            System.out.println("La conexión a la base de datos ha fallado. \nAsegurate de que tienes encendido xampp y los modulos de Apache y MySQL.");
+            System.out.println("La conexion a la base de datos ha fallado. \nAsegurate de que tienes encendido xampp y los modulos de Apache y MySQL.");
         }
     }
 

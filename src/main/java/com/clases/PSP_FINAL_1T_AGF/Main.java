@@ -47,20 +47,23 @@ public class Main {
 
         for (int indice = 0; indice < numHilos; indice++) {
 
-            if (indice == (numHilos-1)){
-                numRegistrosPorHilo = numRegistrosPorHilo+modulo;
+            if (indice == (numHilos - 1)) {
+                numRegistrosPorHilo = numRegistrosPorHilo + modulo;
                 Empleado hilo = new Empleado(numRegistros, numHilos, numRegistrosPorHilo, indice);
                 arrayEmpleados.add(hilo);
-            }else{
+            } else {
                 Empleado hilo = new Empleado(numRegistros, numHilos, numRegistrosPorHilo, indice);
                 arrayEmpleados.add(hilo);
             }
+        }
+        arrayEmpleados.forEach(empleado -> empleado.start());
 
-        }
-        for (int j = 0; j < arrayEmpleados.size(); j++) {
-            arrayEmpleados.get(j).start();
-        }
+        arrayEmpleados.forEach(empleado -> {
+            try {
+                empleado.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
     }
-
-
 }
